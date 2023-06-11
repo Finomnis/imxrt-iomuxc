@@ -22,14 +22,15 @@ flexspi!(module: U1, port: A, signal: Data2, pad: GPIO_SD_B1_10, alt: 1, daisy: 
 flexspi!(module: U1, port: A, signal: Data3, pad: GPIO_AD_B1_10, alt: 0, daisy: Some(DAISY_FLEXSPIA_DATA3_GPIO_AD_B1_10));
 flexspi!(module: U1, port: A, signal: Data3, pad: GPIO_SD_B1_11, alt: 1, daisy: Some(DAISY_FLEXSPIA_DATA3_GPIO_SD_B1_11));
 flexspi!(module: U1, port: A, signal: Dqs, pad: GPIO_AD_B1_09, alt: 0, daisy: Some(DAISY_FLEXSPIA_DQS_GPIO_AD_B1_09));
-// TODO: figure out how to handle pins with multiple functions
-//flexspi!(module: U1, port: A, signal: Dqs, pad: GPIO_SD_B1_05, alt: 1, daisy: Some(DAISY_FLEXSPIA_DQS_GPIO_SD_B1_05));
+flexspi!(module: U1, port: A, signal: Dqs, pad: GPIO_SD_B1_05, alt: 1, daisy: Some(DAISY_FLEXSPIA_DQS_GPIO_SD_B1_05));
 flexspi!(module: U1, port: A, signal: Sclk, pad: GPIO_AD_B1_14, alt: 0, daisy: Some(DAISY_FLEXSPIA_SCK_GPIO_AD_B1_14));
 flexspi!(module: U1, port: A, signal: Sclk, pad: GPIO_SD_B1_07, alt: 1, daisy: Some(DAISY_FLEXSPIA_SCK_GPIO_SD_B1_07));
 flexspi!(module: U1, port: A, signal: Ss0b, pad: GPIO_AD_B1_15, alt: 0, daisy: None);
 flexspi!(module: U1, port: A, signal: Ss0b, pad: GPIO_SD_B1_06, alt: 1, daisy: None);
 flexspi!(module: U1, port: A, signal: Ss1b, pad: GPIO_AD_B1_08, alt: 0, daisy: None);
 flexspi!(module: U1, port: A, signal: Ss1b, pad: GPIO_SD_B0_00, alt: 6, daisy: None);
+// TODO: figure out how to handle pins with multiple functions
+// Maybe via feature flag?
 //flexspi!(module: U1, port: A, signal: Ss1b, pad: GPIO_SD_B1_04, alt: 4, daisy: None);
 
 //
@@ -46,7 +47,7 @@ flexspi!(module: U1, port: B, signal: Data3, pad: GPIO_SD_B1_00, alt: 1, daisy: 
 flexspi!(module: U1, port: B, signal: Dqs, pad: GPIO_SD_B0_05, alt: 4, daisy: None);
 flexspi!(module: U1, port: B, signal: Sclk, pad: GPIO_SD_B1_04, alt: 1, daisy: None);
 flexspi!(module: U1, port: B, signal: Ss0b, pad: GPIO_SD_B0_04, alt: 4, daisy: None);
-flexspi!(module: U1, port: B, signal: Ss0b, pad: GPIO_SD_B1_05, alt: 4, daisy: None);
+//flexspi!(module: U1, port: B, signal: Ss0b, pad: GPIO_SD_B1_05, alt: 4, daisy: None);
 flexspi!(module: U1, port: B, signal: Ss1b, pad: GPIO_SD_B0_01, alt: 6, daisy: None);
 
 //
@@ -94,8 +95,6 @@ flexspi!(module: U2, port: B, signal: Ss1b, pad: GPIO_EMC_09, alt: 8, daisy: Non
 
 /// Auto-generated DAISY values
 mod daisy {
-    //#![allow(unused)]
-
     use super::Daisy;
 
     pub const DAISY_FLEXSPIA_DQS_GPIO_SD_B1_05: Daisy = Daisy::new(0x401f84a4 as *mut u32, 0);
