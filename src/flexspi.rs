@@ -15,10 +15,10 @@ pub enum Data3 {}
 pub enum Dqs {}
 /// A tag that indicates a FlexSPI A Sclk pad
 pub enum Sclk {}
-/// A tag that indicates a FlexSPI A Ss0B pad
-pub enum Ss0B {}
-/// A tag that indicates a FlexSPI A Ss1B pad
-pub enum Ss1B {}
+/// A tag that indicates a FlexSPI A Ss0b pad
+pub enum Ss0b {}
+/// A tag that indicates a FlexSPI A Ss1b pad
+pub enum Ss1b {}
 
 /// A FlexSPI port; one of `A` or `B`
 pub trait Port: private::Sealed {}
@@ -33,8 +33,8 @@ impl Signal for Data2 {}
 impl Signal for Data3 {}
 impl Signal for Dqs {}
 impl Signal for Sclk {}
-impl Signal for Ss0B {}
-impl Signal for Ss1B {}
+impl Signal for Ss0b {}
+impl Signal for Ss1b {}
 
 impl Port for A {}
 impl Port for B {}
@@ -48,8 +48,8 @@ mod private {
     impl Sealed for super::Data3 {}
     impl Sealed for super::Dqs {}
     impl Sealed for super::Sclk {}
-    impl Sealed for super::Ss0B {}
-    impl Sealed for super::Ss1B {}
+    impl Sealed for super::Ss0b {}
+    impl Sealed for super::Ss1b {}
 
     impl Sealed for super::A {}
     impl Sealed for super::B {}
