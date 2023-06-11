@@ -181,6 +181,8 @@ pub mod flexcan;
 #[macro_use]
 pub mod flexpwm;
 #[macro_use]
+pub mod flexspi;
+#[macro_use]
 pub mod lpi2c;
 #[macro_use]
 pub mod lpspi;
@@ -218,8 +220,8 @@ pub mod prelude {
     };
 
     pub use crate::{
-        adc, alternate, ccm, clear_sion, consts, flexcan, flexpwm, gpio, lpi2c, lpspi, lpuart, sai,
-        set_sion, usdhc, Daisy, ErasedPad, Pad, WrongPadError,
+        adc, alternate, ccm, clear_sion, consts, flexcan, flexpwm, flexspi, gpio, lpi2c, lpspi,
+        lpuart, sai, set_sion, usdhc, Daisy, ErasedPad, Pad, WrongPadError,
     };
 }
 

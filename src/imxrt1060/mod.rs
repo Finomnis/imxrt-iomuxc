@@ -6,6 +6,7 @@
 mod adc;
 mod flexcan;
 mod flexpwm;
+mod flexspi;
 mod lpi2c;
 mod lpspi;
 mod lpuart;
