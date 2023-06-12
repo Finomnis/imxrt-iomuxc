@@ -3,7 +3,7 @@
 /// A FlexIO pin
 pub trait Pin<Module: super::consts::Unsigned>: super::Iomuxc {
     // The module needs to be a generic because some pads
-    // are attached to multiple flexio modules
+    // are attached to multiple FlexIO modules
 
     /// FlexIO pin number
     type Pin: super::consts::Unsigned;
